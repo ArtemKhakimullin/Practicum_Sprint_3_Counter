@@ -11,18 +11,11 @@ class ViewController: UIViewController {
     
     var touches = 0
     
-    @IBOutlet weak var counterLable: UILabel!
+    @IBOutlet weak private var counterLabel: UILabel!
     
-    @IBAction func counterButton(_ sender: Any) {
+    @IBAction private func counterButton(_ sender: Any) {
         touches += 1
-        counterLable.text = "Значение счетчика: \(touches)"
+        counterLabel.text = "Значение счетчика: \(touches)"
     }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
-
-
 }
 
