@@ -8,7 +8,16 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    var touches = 0
+    
+    @IBOutlet weak var counterLable: UILabel!
+    
+    @IBAction func counterButton(_ sender: Any) {
+        touches += 1
+        counterLable.text = "Значение счетчика: \(touches)"
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
